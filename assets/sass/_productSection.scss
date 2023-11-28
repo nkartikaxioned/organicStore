@@ -2,7 +2,7 @@
     padding: 80px 0 20px;
     background-color: map-get($map: $colors, $key: lightGgrey);
 
-    .wrapper { width: 68%; }
+    .wrapper { width: 58%; }
 
     &__list{
         width: 100%;
@@ -11,23 +11,24 @@
 
         li {
           width: 32%;
+          max-height: 275px;
           border-radius: 5px;
           @include position($position:relative);
 
           &:not(:first-child) { margin-left: 2%; }
 
           figure { 
-            width: 100%; 
-           
+            width: 100%;
+            height: 100%; 
           img { 
             
-            @include image($width:100%,$objFit:cover);
+            @include image($width:100%,$height: 100%,$objFit:cover);
          }
         }
 
         .products-container {
             padding: 20px 30px;
-            @include position($position:absolute,$top:10%);
+            @include position($position:absolute,$top:4%);
 
             .heading--products { 
                 margin-bottom: 8px;
@@ -75,11 +76,6 @@
             @include basis($flexBasis:30%);
 
             .button--offer {
-                padding: 8px 25px;
-                border-radius: 3px;
-                border: 1px solid map-get($map: $colors, $key: greenColor);
-                color: map-get($map: $colors, $key: whiteColor);
-                transition: .3s;
 
                 &::before {
                     content: map-get($map: $iconContent, $key: shop);

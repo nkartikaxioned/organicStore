@@ -1,0 +1,153 @@
+.footer-section {
+  padding: 60px 0 40px;
+  background-color: map-get($map: $colors, $key: darkBluee);
+  @include position($position:relative);
+
+  .top-footer {
+    @include flex();
+
+    a {
+      @include fontSize($size: 15px);
+    }
+
+    .google::before { 
+      content: map-get($map: $iconContent, $key: google);
+      font-family: "fontAwesome";
+      color: map-get($map: $colors, $key: whiteColor);
+     }
+
+     .app::before { 
+      content: map-get($map: $iconContent, $key: appStore);
+      font-family: "fontAwesome";
+      color: map-get($map: $colors, $key: whiteColor);
+     }
+  }
+
+  h6,
+  .heading--footer {
+    margin-bottom: 40px;
+    color: map-get($map: $colors, $key: whiteColor);
+    text-align: start;
+    @include fontSize($size: 18px, $weight: 600);
+  }
+
+  .quck-link a,
+  .site-link a,
+  .download a {
+    color: map-get($map: $colors, $key: whiteColor);
+  }
+
+  .quick-links2 { margin-bottom: 8px; }
+
+  .app-store,.google-play {
+    text-align: end;
+    white-space: nowrap;
+    @include basis($flexBasis:50%);
+  }
+
+  .download-button { 
+    @include flex();
+    @include align($align:center);
+
+    .app { margin-left: 4px; }
+    .google,.app { 
+      padding: 5px 5px;
+      border: 2px solid map-get($map: $colors, $key: whiteColor);
+      border-radius: 3px;
+      background-color: map-get($map: $colors, $key: blackColor);
+      color: map-get($map: $colors, $key: whiteColor);
+     }
+     }
+
+  ul {
+    margin-bottom: 40px;
+  }
+
+  .heading--second {
+    margin-bottom: 15px;
+  }
+
+  .first {
+    @include basis($flexBasis: 50%);
+
+    h6 a img {
+      max-width: 120px;
+    }
+
+    p {
+      width: 73%;
+      color: map-get($map: $colors, $key: whiteColor);
+      @include fontSize($size: 15px);
+    }
+  }
+
+  .second {
+    @include basis($flexBasis: 26%);
+  }
+
+  .third {
+    @include basis($flexBasis: 24%);
+  }
+
+  .bottom-footer {
+    @include flex();
+    @include align($align: center);
+    
+
+    p {
+      color: map-get($map: $colors, $key: whiteColor);
+      @include basis($flexBasis: 84%);
+    }
+
+    .social {
+      margin-bottom: 0;
+      @include flex();
+
+      li a {
+        padding: 10px;
+      }
+
+
+    }
+
+    .icon::before {
+      color: map-get($map: $colors, $key: whiteColor);
+    }
+
+    .unkown::before {
+      content: map-get($map: $iconContent, $key: snapchat);
+    }
+
+    .facebook::before {
+      content: map-get($map: $iconContent, $key: facebook);
+    }
+
+    .twitter::before {
+      content: map-get($map: $iconContent, $key: twitter);
+    }
+
+    .instagram::before {
+      content: map-get($map: $iconContent, $key: instagram);
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      display: block;
+      background: map-get($map: $colors, $key: greyy);
+      @include position($position:absolute, $bottom:15%, $left:0)
+    }
+  }
+
+  a {
+    transition: .3s;
+
+    @include hover-effect($value: 995px) {
+      &:hover {
+        color: map-get($map: $colors, $key: golden);
+      }
+    }
+  }
+}
