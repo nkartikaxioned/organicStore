@@ -41,12 +41,7 @@
     }
 
     .button--shop-now {
-      padding: 8px 20px;
-      border: 1px solid map-get($map: $colors, $key: greenColor);
-      border-radius: 3px;
-      margin-top: 20px;
-      color: map-get($map: $colors, $key: whiteColor);
-      transition: .3s;
+       margin-top: 20px;
 
       @include hover-effect($value:995px) {
         &:hover {

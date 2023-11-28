@@ -11,14 +11,18 @@
 
         li {
           width: 32%;
+          border-radius: 5px;
           @include position($position:relative);
 
           &:not(:first-child) { margin-left: 2%; }
 
           figure { 
             width: 100%; 
-            border-radius: 5px;
-          img { @include image($width:100%,$objFit:cover); }
+           
+          img { 
+            
+            @include image($width:100%,$objFit:cover);
+         }
         }
 
         .products-container {
@@ -32,7 +36,7 @@
 
             p { 
                 line-height: 1.5;
-                @include fontSize($size: 14px); 
+                @include fontSize($size: 14px,$weight:300); 
             }
         }
 
@@ -40,12 +44,7 @@
     }
 
     .button--shop {
-        padding: 8px 25px;
-        border-radius: 3px;
-        border: 1px solid map-get($map: $colors, $key: greenColor);
         margin-top: 10px;
-        color: map-get($map: $colors, $key: whiteColor);
-        transition: .3s;
 
         &::after {
             content: map-get($map: $iconContent, $key: rightArrow);

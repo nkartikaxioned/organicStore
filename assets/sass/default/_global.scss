@@ -19,7 +19,12 @@ li { list-style-type: none; }
 }
 
 .button { 
-    background-color: map-get($map: $colors, $key: greenColor);;
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid map-get($map: $colors, $key: greenColor);
+    background-color: map-get($map: $colors, $key: greenColor);
+    color: map-get($map: $colors, $key: whiteColor);
+    transition: .3s;
     @include fontSize($weight: 300);
     @include textTransform($transform:capitalize);
  }

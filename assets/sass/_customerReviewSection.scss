@@ -1,0 +1,97 @@
+.cutomer-review-section {
+    padding-top: 80px;
+    text-align: center;
+
+    .heading--review {
+        margin-bottom: 20px;
+        @include fontSize($size: 28px,$weight:600 ); 
+    }
+
+    figure {
+        margin-bottom: 20px;
+        margin-right: 10px;
+        img { @include image($width:50px,$objFit:cover); }
+    }
+
+    &__list {
+        margin: 35px 0 40px;
+        @include flex();
+        
+        li {
+            width: 32%;
+            padding: 40px;
+
+            &:not(:first-child) { margin-left: 2%; }
+            .rating::before {
+                content: map-get($map: $iconContent, $key: rating);
+                color: map-get($map: $colors, $key: golden);
+                @include fontSize($size: 12px);
+            }
+
+            figure { display: inline; }
+
+            .button--shop {
+                   margin-top: 30px;
+        
+        &::after {
+            content: map-get($map: $iconContent, $key: rightArrow);
+            margin-left: 10px;
+            font-family: "fontAwesome";
+            @include fontSize($size: 14px); 
+        }
+
+        @include hover-effect($value:995px) {
+            &:hover {
+               background-color: transparent;
+        color: map-get($map: $colors, $key: greenColor);
+            }
+        }
+            }
+        }
+    }
+
+    .featured-brands { 
+        margin: 60px 0;
+        @include flex(); 
+        @include align($align:center);
+
+        li { 
+            &:not(:first-child) { margin-left: 1%; }
+         }
+        img { max-width: 130px; }
+    }
+
+    p { 
+        margin: 10px 0;
+        line-height: 1.5;
+        @include fontSize($size: 13px); 
+    }
+
+    .heading--cutomer { @include fontSize($size: 20px,$weight:600); }
+
+    .rate { 
+        min-width: 268px;
+        min-height: 295px;
+        @include position($position:relative); 
+
+        figure { 
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0;
+            z-index: -1;
+            @include position($position:absolute,$top:0,$left:0);
+            
+            img { 
+                border-radius: 5px;
+                filter: brightness(.5);
+                @include image($width:100%,$height:100%,$objFit:cover) 
+            }
+        }
+
+        .vegi-container {
+            h6,p { color: map-get($map: $colors, $key: whiteColor); }
+        }
+
+        .heading--cutomer { @include fontSize($size: 23px);  }
+    }
+}
