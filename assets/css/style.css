@@ -281,6 +281,7 @@ li {
     font-family: "fontAwesome";
     font-size: 16px; }
 
+/*! header section start */
 .section-header {
   width: 100%;
   padding: 10px 0;
@@ -324,6 +325,7 @@ li {
     width: 100px;
     height: auto; }
 
+/*! header section end */
 /* ! banner section start */
 .banner-section {
   height: 100vh;
@@ -372,6 +374,7 @@ li {
       font-size: 14px; }
 
 /* ! banner section end */
+/*! features section start */
 .features {
   padding: 20px 0;
   background-color: #0F0F0F; }
@@ -408,6 +411,8 @@ li {
     .features__list .caps {
       display: block; }
 
+/*! features section end */
+/*! best selling section start */
 .best-selling-section {
   padding: 100px 0;
   text-align: center; }
@@ -449,6 +454,8 @@ li {
 .leaf {
   text-align: center; }
 
+/*! best selling section end */
+/*! products section start */
 .products-section {
   padding: 80px 0 20px;
   background-color: #F9F7F5; }
@@ -519,6 +526,8 @@ li {
     font-weight: 600;
     text-align: center; }
 
+/*! products section end */
+/*! trending section start */
 .trending-section {
   padding: 80px 0;
   text-align: center; }
@@ -560,6 +569,8 @@ li {
 .leaf {
   text-align: center; }
 
+/*! trending section end */
+/*! customer review section start */
 .cutomer-review-section {
   padding-top: 80px;
   text-align: center; }
@@ -637,6 +648,8 @@ li {
     .cutomer-review-section .rate .heading--cutomer {
       font-size: 23px; }
 
+/*! customer review section end */
+/*! footer section start */
 .footer-section {
   padding: 60px 0 40px;
   background-color: #04142A;
@@ -733,5 +746,7 @@ li {
     @media only screen and (min-width: 995px) {
       .footer-section a:hover {
         color: #F5C300; } }
+
+/*! footer section end */
 
 /*# sourceMappingURL=style.css.map */
