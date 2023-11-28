@@ -4,13 +4,13 @@ a {
 }
 
 .wrapper { 
-    width: 76%;
+    width: 60%;
     margin: 0 auto;
 }
 
 li { list-style-type: none; }
 .caps { @include textTransform($transform:capitalize); }
-.green { background-color: map-get($map: $colors, $key: greenColor); }
+.green { color: map-get($map: $colors, $key: greenColor); }
 
 .heading { 
     text-align: center;

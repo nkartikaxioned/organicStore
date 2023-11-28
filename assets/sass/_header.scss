@@ -1,0 +1,58 @@
+.section-header {
+    width: 100%;
+    padding: 10px 0;
+    @include position($position:fixed, $z-index:1, $top:0, $left:0);
+
+    .wrapper { 
+        width: 96%; 
+        @include flex();
+        @include align($align:center);
+    }
+
+    &__nav-list { margin-left: 10px }
+
+    &__about-list { 
+        @include basis($flexBasis:72%); 
+        @include justify($justify:end);
+
+        .cart::after {
+            content: map-get($map: $iconContent, $key: shop);
+            margin-left: 10px;
+            font-family: "fontAwesome";
+        }
+
+        .login { 
+            font-size: 0 ;
+            
+            &::before {
+                content: map-get($map: $iconContent, $key: login);
+                @include fontSize($size: 16px);
+                font-family: "fontAwesome";
+            }
+        }
+    }
+
+    &__nav-list,&__about-list { 
+        @include flex(); 
+
+        li { text-transform: capitalize; 
+        
+            a { 
+                padding: 10px 15px; 
+                color: map-get($map: $colors, $key: blackColor);
+                transition: .3s;
+
+                &:hover {
+                    color: map-get($map: $colors, $key: greenColor);
+                }
+            }
+
+            .green { color: map-get($map: $colors, $key: greenColor); }
+        }
+    }
+
+    h1 {
+
+        img { @include image($width:100px) }
+    }
+}
