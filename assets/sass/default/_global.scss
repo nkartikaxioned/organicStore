@@ -1,0 +1,43 @@
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.wrapper { 
+    width: 76%;
+    margin: 0 auto;
+}
+
+li { list-style-type: none; }
+.caps { @include textTransform($transform:capitalize); }
+.green { background-color: map-get($map: $colors, $key: greenColor); }
+
+.heading { 
+    text-align: center;
+    @include fontSize($size: 32px, $weight: 300, $family: null);
+    @include textTransform($transform:capitalize); 
+}
+
+.button { 
+    background-color: map-get($map: $colors, $key: greenColor);;
+    @include fontSize($weight: 300);
+    @include textTransform($transform:capitalize);
+ }
+
+ .icon {
+    font-family: "fontAwesome";
+    transition: .3s;
+    @include fontSize($size: 0);
+
+    &::before {
+        font-family: "fontAwesome";
+        @include fontSize($size: 16px); 
+    }
+
+    &::after {
+        font-family: "fontAwesome";
+        @include fontSize($size: 16px); 
+    }
+ }
+
+ 
