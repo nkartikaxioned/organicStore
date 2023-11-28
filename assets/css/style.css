@@ -449,4 +449,82 @@ li {
 .leaf {
   text-align: center; }
 
+.products-section {
+  padding: 80px 0 20px;
+  background-color: #F9F7F5; }
+  .products-section .wrapper {
+    width: 68%; }
+  .products-section__list {
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex; }
+    .products-section__list li {
+      width: 32%;
+      position: relative; }
+      .products-section__list li:not(:first-child) {
+        margin-left: 2%; }
+      .products-section__list li figure {
+        width: 100%;
+        border-radius: 5px; }
+        .products-section__list li figure img {
+          width: 100%;
+          height: auto;
+          object-fit: cover; }
+      .products-section__list li .products-container {
+        padding: 20px 30px;
+        position: absolute;
+        top: 10%; }
+        .products-section__list li .products-container .heading--products {
+          margin-bottom: 8px;
+          font-size: 22px;
+          font-weight: 600; }
+        .products-section__list li .products-container p {
+          line-height: 1.5;
+          font-size: 14px; }
+  .products-section .button--shop {
+    padding: 8px 25px;
+    border-radius: 3px;
+    border: 1px solid #77A131;
+    margin-top: 10px;
+    color: #fff;
+    transition: .3s; }
+    .products-section .button--shop::after {
+      content: "";
+      margin-left: 10px;
+      font-family: "fontAwesome";
+      font-size: 14px; }
+    @media only screen and (min-width: 995px) {
+      .products-section .button--shop:hover {
+        background-color: transparent;
+        color: #77A131; } }
+  .products-section .offer {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #0F0F0F; }
+    .products-section .offer .heading--offer {
+      color: #fff; }
+    .products-section .offer .offer-button {
+      text-align: end;
+      flex-basis: 30%; }
+      .products-section .offer .offer-button .button--offer {
+        padding: 8px 25px;
+        border-radius: 3px;
+        border: 1px solid #77A131;
+        color: #fff;
+        transition: .3s; }
+        .products-section .offer .offer-button .button--offer::before {
+          content: "";
+          margin-right: 10px;
+          font-family: "fontAwesome"; }
+        @media only screen and (min-width: 995px) {
+          .products-section .offer .offer-button .button--offer:hover {
+            background-color: transparent;
+            color: #77A131; } }
+  .products-section p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
