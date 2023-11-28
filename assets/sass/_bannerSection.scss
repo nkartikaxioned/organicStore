@@ -1,0 +1,68 @@
+/* ! banner section start */
+.banner-section {
+  height: 100vh;
+  padding: 80px 0;
+  @include position($position: relative);
+
+  .wrapper {
+    padding-top: 80px;
+    @include flex();
+  }
+
+  figure {
+    min-width: 415px;
+
+    img {
+      @include image($width: 100%, $objFit: cover);
+    }
+  }
+
+  &__container {
+    margin-left: 8%;
+
+    .background {
+      max-width: 400px;
+      filter: opacity(.2);
+      z-index: -1;
+      @include position($position: absolute, $right: 0, $bottom: 0);
+
+      img { min-width: 415px; }
+    }
+
+    .banner-logo {
+      min-width: 0;
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .heading--banner {
+      margin-top: 18px;
+      text-align: start;
+    }
+
+    .button--shop-now {
+       margin-top: 20px;
+
+      @include hover-effect($value:995px) {
+        &:hover {
+          background-color: transparent;
+          color: map-get($map: $colors, $key: greenColor);
+        }
+      }
+
+      &::before {
+        content: map-get($map: $iconContent, $key: shop);
+        margin-right: 10px;
+        font-family: "fontAwesome";
+      }
+    }
+
+    p {
+      margin-top: 18px;
+      color: map-get($map: $colors, $key: lightmedGreyy);
+      @include fontSize($size: 14px);
+    }
+  }
+}
+
+/* ! banner section end */

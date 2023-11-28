@@ -1,0 +1,45 @@
+/*! features section start */
+.features {
+    padding: 20px 0;
+    background-color: map-get($map: $colors, $key: medGrey) ;
+
+    &__list {
+        @include flex();
+
+        li {
+            padding: 23px 15px;
+            border-radius: 3px;
+           background-color: map-get($map: $colors, $key: greyy);
+           @include basis($flexBasis: 24%);
+
+           &:not(:first-child) { margin-left: 2%; }
+
+           & span:last-child { 
+               margin-top: 10px;
+            margin-left: 28px; 
+             @include fontSize($size: 13px);
+        }
+
+           span { color: map-get($map: $colors, $key: whiteColor) ; }
+
+           .shipping::before
+           ,.organic::before
+           ,.savings::before
+           ,.returns::before { 
+            margin-right: 10px;
+               color: map-get($map: $colors, $key: greenColor) ;
+            font-family: "fontAwesome"; 
+        }
+
+           .shipping::before { content: map-get($map: $iconContent, $key: truck) };
+           .organic::before { content: map-get($map: $iconContent, $key: contact) };
+           .savings::before { content: map-get($map: $iconContent, $key: money) };
+           .returns::before { content: map-get($map: $iconContent, $key: recycle) };
+        }
+        .caps { 
+            display: block; 
+            
+        }
+    }
+}
+/*! features section end */

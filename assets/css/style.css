@@ -1,154 +1,809 @@
-@charset "utf-8";
+@charset "UTF-8";
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll; }
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom; }
 
 /* Hand cursor on clickable input elements */
 label,
 input[type='button'],
 input[type='submit'],
 button {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 strong {
   font-weight: bold;
   font-family: inherit;
-  font-size: inherit;
-}
+  font-size: inherit; }
 
-em { font-style: italic; }
+em {
+  font-style: italic; }
 
 img {
-  width: 100%;
   border: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 sub,
 sup {
   vertical-align: baseline;
   position: relative;
   font-size: 55%;
-  line-height: 0;
-}
+  line-height: 0; }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -.7em; }
+
+sub {
+  bottom: -.25em; }
 
 /* 1.2. Clear Fix
-   ========================== */
-
+   ========================================================================== */
 .cf:before,
 .cf:after {
   display: table;
-  content: " ";
-}
+  content: " "; }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both; }
 
-/*for all*/
-body {
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
+.cf {
+  zoom: 1; }
 
-a { 
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold; }
+
+a {
   display: inline-block;
-  text-decoration: none; 
-}
+  text-decoration: none; }
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto; }
 
 li {
-  display: inline-block;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
-/*for wrapper*/
-.wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
-}
-/*=================================
-  Header styling starts here
-=================================*/
+.caps {
+  text-transform: capitalize; }
 
+.green {
+  color: #77A131; }
 
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: capitalize; }
 
+.button {
+  padding: 8px 25px;
+  border-radius: 3px;
+  border: 1px solid #77A131;
+  background-color: #77A131;
+  color: #fff;
+  transition: .3s;
+  font-weight: 300;
+  text-transform: capitalize; }
 
+.icon {
+  font-family: "fontAwesome";
+  transition: .3s;
+  font-size: 0; }
+  .icon::before {
+    font-family: "fontAwesome";
+    font-size: 16px; }
+  .icon::after {
+    font-family: "fontAwesome";
+    font-size: 16px; }
 
+/*! header section start */
+.section-header {
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+  .section-header .wrapper {
+    width: 96%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .section-header__nav-list {
+    margin-left: 10px; }
+  .section-header__about-list {
+    -ms-flex-preferred-size: 72%;
+    flex-basis: 72%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end; }
+    .section-header__about-list .cart::after {
+      content: "";
+      margin-left: 10px;
+      font-family: "fontAwesome"; }
+    .section-header__about-list .login {
+      font-size: 0; }
+      .section-header__about-list .login::before {
+        content: "";
+        font-size: 16px;
+        font-family: "fontAwesome"; }
+  .section-header__nav-list, .section-header__about-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .section-header__nav-list li, .section-header__about-list li {
+      text-transform: capitalize; }
+      .section-header__nav-list li a, .section-header__about-list li a {
+        padding: 10px 15px;
+        color: #000;
+        transition: .3s; }
+        @media only screen and (min-width: 995px) {
+          .section-header__nav-list li a:hover, .section-header__about-list li a:hover {
+            color: #77A131; } }
+      .section-header__nav-list li .green, .section-header__about-list li .green {
+        color: #77A131; }
+  .section-header h1 img {
+    width: 100px;
+    height: auto; }
 
-/*=================================
-  Header styling ends here
-=================================*/  
+/*! header section end */
+/* ! banner section start */
+.banner-section {
+  height: 100vh;
+  padding: 80px 0;
+  position: relative; }
+  .banner-section .wrapper {
+    padding-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .banner-section figure {
+    min-width: 415px; }
+    .banner-section figure img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .banner-section__container {
+    margin-left: 8%; }
+    .banner-section__container .background {
+      max-width: 400px;
+      filter: opacity(0.2);
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+      .banner-section__container .background img {
+        min-width: 415px; }
+    .banner-section__container .banner-logo {
+      min-width: 0;
+      width: 50px;
+      margin-bottom: 20px; }
+    .banner-section__container .heading--banner {
+      margin-top: 18px;
+      text-align: start; }
+    .banner-section__container .button--shop-now {
+      margin-top: 20px; }
+      @media only screen and (min-width: 995px) {
+        .banner-section__container .button--shop-now:hover {
+          background-color: transparent;
+          color: #77A131; } }
+      .banner-section__container .button--shop-now::before {
+        content: "";
+        margin-right: 10px;
+        font-family: "fontAwesome"; }
+    .banner-section__container p {
+      margin-top: 18px;
+      color: #4b4949;
+      font-size: 14px; }
 
-/*=================================
-  main styling starts here
-=================================*/
+/* ! banner section end */
+/*! features section start */
+.features {
+  padding: 20px 0;
+  background-color: #0F0F0F; }
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .features__list li {
+      padding: 23px 15px;
+      border-radius: 3px;
+      background-color: #373737;
+      -ms-flex-preferred-size: 24%;
+      flex-basis: 24%; }
+      .features__list li:not(:first-child) {
+        margin-left: 2%; }
+      .features__list li span:last-child {
+        margin-top: 10px;
+        margin-left: 28px;
+        font-size: 13px; }
+      .features__list li span {
+        color: #fff; }
+      .features__list li .shipping::before
+      , .features__list li .organic::before
+      , .features__list li .savings::before
+      , .features__list li .returns::before {
+        margin-right: 10px;
+        color: #77A131;
+        font-family: "fontAwesome"; }
+      .features__list li .shipping::before {
+        content: ""; }
+      .features__list li .organic::before {
+        content: ""; }
+      .features__list li .savings::before {
+        content: ""; }
+      .features__list li .returns::before {
+        content: ""; }
+    .features__list .caps {
+      display: block; }
 
+/*! features section end */
+/*! best selling section start */
+.best-selling-section {
+  padding: 100px 0;
+  text-align: center; }
+  .best-selling-section .heading--best-selling {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600; }
+  .best-selling-section figure {
+    margin-bottom: 20px; }
+    .best-selling-section figure img {
+      width: 50px;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .best-selling-section__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .best-selling-section__list .heading--selling {
+      margin: 3px 0;
+      font-size: 15px; }
+    .best-selling-section__list .groceries {
+      color: #4b4949;
+      font-size: 13px; }
+    .best-selling-section__list li:not(:first-child) {
+      margin-left: 2%; }
+    .best-selling-section__list li figure {
+      width: 100%;
+      margin-bottom: 10px; }
+    .best-selling-section__list li img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    .best-selling-section__list li .rating::before {
+      content: "";
+      color: #4b4949;
+      font-size: 12px; }
+    .best-selling-section__list .line {
+      color: #4b4949;
+      text-decoration: line-through; }
 
+.leaf {
+  text-align: center; }
 
+/*! best selling section end */
+/*! products section start */
+.products-section {
+  padding: 80px 0 20px;
+  background-color: #F9F7F5; }
+  .products-section .wrapper {
+    width: 58%; }
+  .products-section__list {
+    width: 100%;
+    margin-bottom: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .products-section__list li {
+      width: 32%;
+      max-height: 275px;
+      border-radius: 5px;
+      position: relative; }
+      .products-section__list li:not(:first-child) {
+        margin-left: 2%; }
+      .products-section__list li figure {
+        width: 100%;
+        height: 100%; }
+        .products-section__list li figure img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover; }
+      .products-section__list li .products-container {
+        padding: 20px 30px;
+        position: absolute;
+        top: 4%; }
+        .products-section__list li .products-container .heading--products {
+          margin-bottom: 8px;
+          font-size: 22px;
+          font-weight: 600; }
+        .products-section__list li .products-container p {
+          line-height: 1.5;
+          font-size: 14px;
+          font-weight: 300; }
+  .products-section .button--shop {
+    margin-top: 10px; }
+    .products-section .button--shop::after {
+      content: "";
+      margin-left: 10px;
+      font-family: "fontAwesome";
+      font-size: 14px; }
+    @media only screen and (min-width: 995px) {
+      .products-section .button--shop:hover {
+        background-color: transparent;
+        color: #77A131; } }
+  .products-section .offer {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #0F0F0F; }
+    .products-section .offer .heading--offer {
+      color: #fff; }
+    .products-section .offer .offer-button {
+      text-align: end;
+      -ms-flex-preferred-size: 30%;
+      flex-basis: 30%; }
+      .products-section .offer .offer-button .button--offer::before {
+        content: "";
+        margin-right: 10px;
+        font-family: "fontAwesome"; }
+      @media only screen and (min-width: 995px) {
+        .products-section .offer .offer-button .button--offer:hover {
+          background-color: transparent;
+          color: #77A131; } }
+  .products-section p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; }
 
+/*! products section end */
+/*! trending section start */
+.trending-section {
+  padding: 80px 0;
+  text-align: center; }
+  .trending-section .heading--trending {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600; }
+  .trending-section figure {
+    margin-bottom: 20px; }
+    .trending-section figure img {
+      width: 50px;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .trending-section__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .trending-section__list .heading--selling {
+      margin: 3px 0;
+      font-size: 15px; }
+    .trending-section__list .groceries {
+      color: #4b4949;
+      font-size: 13px; }
+    .trending-section__list li:not(:first-child) {
+      margin-left: 2%; }
+    .trending-section__list li figure {
+      width: 100%;
+      margin-bottom: 10px; }
+    .trending-section__list li img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    .trending-section__list li .rating::before {
+      content: "";
+      color: #4b4949;
+      font-size: 12px; }
+    .trending-section__list .line {
+      color: #4b4949;
+      text-decoration: line-through; }
 
+.leaf {
+  text-align: center; }
 
+/*! trending section end */
+/*! customer review section start */
+.cutomer-review-section {
+  padding-top: 80px;
+  text-align: center; }
+  .cutomer-review-section .heading--review {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600; }
+  .cutomer-review-section figure {
+    margin-bottom: 20px;
+    margin-right: 10px; }
+    .cutomer-review-section figure img {
+      width: 50px;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .cutomer-review-section__list {
+    margin: 35px 0 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .cutomer-review-section__list li {
+      width: 32%;
+      padding: 40px; }
+      .cutomer-review-section__list li:not(:first-child) {
+        margin-left: 2%; }
+      .cutomer-review-section__list li .rating::before {
+        content: "";
+        color: #F5C300;
+        font-size: 12px; }
+      .cutomer-review-section__list li figure {
+        display: inline; }
+      .cutomer-review-section__list li .button--shop {
+        margin-top: 30px; }
+        .cutomer-review-section__list li .button--shop::after {
+          content: "";
+          margin-left: 10px;
+          font-family: "fontAwesome";
+          font-size: 14px; }
+        @media only screen and (min-width: 995px) {
+          .cutomer-review-section__list li .button--shop:hover {
+            background-color: transparent;
+            color: #77A131; } }
+  .cutomer-review-section .featured-brands {
+    margin: 60px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .cutomer-review-section .featured-brands li:not(:first-child) {
+      margin-left: 1%; }
+    .cutomer-review-section .featured-brands img {
+      max-width: 130px; }
+  .cutomer-review-section p {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-size: 13px; }
+  .cutomer-review-section .heading--cutomer {
+    font-size: 20px;
+    font-weight: 600; }
+  .cutomer-review-section .rate {
+    min-width: 268px;
+    min-height: 295px;
+    position: relative; }
+    .cutomer-review-section .rate figure {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .cutomer-review-section .rate figure img {
+        border-radius: 5px;
+        filter: brightness(0.5);
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover; }
+    .cutomer-review-section .rate .vegi-container h6, .cutomer-review-section .rate .vegi-container p {
+      color: #fff; }
+    .cutomer-review-section .rate .heading--cutomer {
+      font-size: 23px; }
 
+/*! customer review section end */
+/*! footer section start */
+.footer-section {
+  padding: 60px 0 40px;
+  background-color: #04142A;
+  position: relative; }
+  .footer-section .top-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .footer-section .top-footer a {
+      font-size: 15px; }
+    .footer-section .top-footer .google::before {
+      content: "";
+      font-family: "fontAwesome";
+      color: #fff; }
+    .footer-section .top-footer .app::before {
+      content: "";
+      font-family: "fontAwesome";
+      color: #fff; }
+  .footer-section h6,
+  .footer-section .heading--footer {
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: start;
+    font-size: 18px;
+    font-weight: 600; }
+  .footer-section .quck-link a,
+  .footer-section .site-link a,
+  .footer-section .download a {
+    color: #fff; }
+  .footer-section .quick-links2 {
+    margin-bottom: 8px; }
+  .footer-section .app-store, .footer-section .google-play {
+    text-align: end;
+    white-space: nowrap;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; }
+  .footer-section .download-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .footer-section .download-button .app {
+      margin-left: 4px; }
+    .footer-section .download-button .google, .footer-section .download-button .app {
+      padding: 5px 5px;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      background-color: #000;
+      color: #fff; }
+  .footer-section ul {
+    margin-bottom: 40px; }
+  .footer-section .heading--second {
+    margin-bottom: 15px; }
+  .footer-section .first {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; }
+    .footer-section .first h6 a img {
+      max-width: 120px; }
+    .footer-section .first p {
+      width: 73%;
+      color: #fff;
+      font-size: 15px; }
+  .footer-section .second {
+    -ms-flex-preferred-size: 26%;
+    flex-basis: 26%; }
+  .footer-section .third {
+    -ms-flex-preferred-size: 24%;
+    flex-basis: 24%; }
+  .footer-section .bottom-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .footer-section .bottom-footer p {
+      color: #fff;
+      -ms-flex-preferred-size: 84%;
+      flex-basis: 84%; }
+    .footer-section .bottom-footer .social {
+      margin-bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .footer-section .bottom-footer .social li a {
+        padding: 10px; }
+    .footer-section .bottom-footer .icon::before {
+      color: #fff; }
+    .footer-section .bottom-footer .unkown::before {
+      content: ""; }
+    .footer-section .bottom-footer .facebook::before {
+      content: ""; }
+    .footer-section .bottom-footer .twitter::before {
+      content: ""; }
+    .footer-section .bottom-footer .instagram::before {
+      content: ""; }
+    .footer-section .bottom-footer::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      display: block;
+      background: #373737;
+      position: absolute;
+      bottom: 15%;
+      left: 0; }
+  .footer-section a {
+    transition: .3s; }
+    @media only screen and (min-width: 995px) {
+      .footer-section a:hover {
+        color: #F5C300; } }
 
-/*=================================
-  main styling ends here
-=================================*/
+/*! footer section end */
 
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+/*# sourceMappingURL=style.css.map */

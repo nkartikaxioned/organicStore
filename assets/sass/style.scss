@@ -1,0 +1,15 @@
+//mixin import
+@import "default/mixins";
+@import "default/variables";
+@import "default/reset";
+@import "default/global";
+
+//sections import
+@import "_header.scss";
+@import "_bannerSection.scss";
+@import "_featureSection.scss";
+@import "_bestSellingSection.scss";
+@import "_productSection.scss";
+@import "_trendingSection.scss";
+@import "_customerReviewSection.scss";
+@import "_footer.scss";

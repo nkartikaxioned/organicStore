@@ -1,0 +1,41 @@
+$colors : (
+whiteColor:#fff,
+blackColor:#000,
+darkBluee:#04142A,
+lightGgrey:#F9F7F5,
+lightmedGreyy: #4b4949,
+medGrey:#0F0F0F,
+greyy:#373737,
+greenColor:#77A131,
+golden:#F5C300,
+light:#706969,
+);
+
+$devices: (
+  largeLaptop: 1440px,
+  laptop: 1280px,
+  smallLaptop: 1024px,
+  tablet: 995px,
+  ipad: 768px,
+  extralargePhone: 640px,
+  largePhone: 480px,
+  mediumPhone: 375px,
+  smallPhone:320px,
+  );
+
+$iconContent: (
+    login:"\f007",
+    rating:"\f005",
+    shop:"\f07a",
+    truck:"\f0d1",
+    contact:"\f2b9",
+    money:"\f0d6",
+    recycle:"\f1b8",
+    twitter:"\f081",
+    facebook:"\f09a",
+    instagram: "\f16d",
+    snapchat: "\f2ab",
+    rightArrow: "\f061",
+    google: "\f3ab",
+    appStore: "\f179",
+);
