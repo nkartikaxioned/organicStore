@@ -1,9 +1,14 @@
 @mixin flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 @mixin direction($direction) {
-    flex-direction: $direction;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: $direction;
+            flex-direction: $direction;
 }
 
 @mixin textTransform($transform) {
@@ -11,26 +16,33 @@
 }
 
 @mixin basis($flexBasis) {
-   flex-basis: $flexBasis;
+   -ms-flex-preferred-size: $flexBasis;
+       flex-basis: $flexBasis;
 }
 
 @mixin wrap($wrap) {
-    flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+        flex-wrap: $wrap;
 }
 
 @mixin align($align) {
-    align-items: $align;
+    -webkit-box-align: $align;
+        -ms-flex-align: $align;
+            align-items: $align;
 }
 
 @mixin justify($justify) {
-    justify-content: $justify;
+    -webkit-box-pack: $justify;
+        -ms-flex-pack: $justify;
+            justify-content: $justify;
 }
 
 //for image styling
 @mixin image($width:null,$height:auto,$objFit:null) {
     width: $width;
     height: $height;
-    object-fit: $objFit;
+    -o-object-fit: $objFit;
+       object-fit: $objFit;
 }
 
 //mixin for font
@@ -42,12 +54,16 @@ font-family: $family;
 
 //transition mixin
 @mixin transition($property: all, $time:null, $func:null) {
+    -webkit-transition: $property $time $func;
+    -o-transition: $property $time $func;
     transition: $property $time $func;
 }
 
 //transform mixin
 @mixin transform($transform) {
-    transform: $transform;
+    -webkit-transform: $transform;
+        -ms-transform: $transform;
+            transform: $transform;
 }
 
 //mixin for styling position
@@ -62,7 +78,8 @@ left: $left;
 
 //for box sizing
 @mixin boxSizing($property) {
-    box-sizing: $property;
+    -webkit-box-sizing: $property;
+            box-sizing: $property;
 }
 
 //responsive mixin
