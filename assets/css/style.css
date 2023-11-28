@@ -310,12 +310,67 @@ li {
         padding: 10px 15px;
         color: #000;
         transition: .3s; }
-        .section-header__nav-list li a:hover, .section-header__about-list li a:hover {
-          color: #77A131; }
+        @media only screen and (min-width: 995px) {
+          .section-header__nav-list li a:hover, .section-header__about-list li a:hover {
+            color: #77A131; } }
       .section-header__nav-list li .green, .section-header__about-list li .green {
         color: #77A131; }
   .section-header h1 img {
     width: 100px;
     height: auto; }
+
+/* ! banner section start */
+.banner-section {
+  height: 100vh;
+  padding: 80px 0;
+  position: relative; }
+  .banner-section .wrapper {
+    padding-top: 80px;
+    display: flex; }
+  .banner-section figure {
+    min-width: 415px; }
+    .banner-section figure img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+  .banner-section__container {
+    margin-left: 8%; }
+    .banner-section__container .background {
+      max-width: 400px;
+      filter: opacity(0.2);
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+      .banner-section__container .background img {
+        min-width: 415px; }
+    .banner-section__container .banner-logo {
+      min-width: 0;
+      width: 50px;
+      margin-bottom: 20px; }
+    .banner-section__container .heading--banner {
+      margin-top: 18px;
+      text-align: start; }
+    .banner-section__container .button--shop-now {
+      padding: 8px 20px;
+      border: 1px solid #77A131;
+      border-radius: 3px;
+      margin-top: 20px;
+      color: #fff;
+      transition: .3s; }
+      @media only screen and (min-width: 995px) {
+        .banner-section__container .button--shop-now:hover {
+          background-color: transparent;
+          color: #77A131; } }
+      .banner-section__container .button--shop-now::before {
+        content: "";
+        margin-right: 10px;
+        font-family: "fontAwesome"; }
+    .banner-section__container p {
+      margin-top: 18px;
+      color: #4b4949;
+      font-size: 14px; }
+
+/* ! banner section end */
 
 /*# sourceMappingURL=style.css.map */
