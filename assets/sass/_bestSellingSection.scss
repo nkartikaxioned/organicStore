@@ -1,0 +1,53 @@
+.best-selling-section {
+    padding: 100px 0;
+    text-align: center;
+
+    .heading--best-selling { 
+        margin-bottom: 20px;
+        @include fontSize($size: 28px,$weight:600 ); 
+    }
+
+    figure {
+        margin-bottom: 20px;
+        img { @include image($width:50px,$objFit:cover); }
+    }
+
+    &__list { 
+        @include flex(); 
+    
+        .heading--selling { 
+            margin: 3px 0;
+            @include fontSize($size: 15px); 
+        }
+
+        .groceries { 
+            color: map-get($map: $colors, $key: lightmedGreyy);
+            @include fontSize($size: 13px); 
+        }
+
+        li {
+            &:not(:first-child) {
+                margin-left: 2%;
+            }
+
+            figure { 
+                width: 100%; 
+                margin-bottom: 10px;
+            }
+            img { @include image($width:100%,$objFit:cover); }
+
+            .rating::before {
+                content: map-get($map: $iconContent, $key: rating);
+                color: map-get($map: $colors, $key: lightmedGreyy);
+                @include fontSize($size: 12px);
+            }
+
+        }
+        .line { 
+            color: map-get($map: $colors, $key: lightmedGreyy);
+            text-decoration: line-through; 
+        }
+    }
+}
+
+.leaf { text-align: center; }

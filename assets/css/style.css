@@ -408,4 +408,45 @@ li {
     .features__list .caps {
       display: block; }
 
+.best-selling-section {
+  padding: 100px 0;
+  text-align: center; }
+  .best-selling-section .heading--best-selling {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600; }
+  .best-selling-section figure {
+    margin-bottom: 20px; }
+    .best-selling-section figure img {
+      width: 50px;
+      height: auto;
+      object-fit: cover; }
+  .best-selling-section__list {
+    display: flex; }
+    .best-selling-section__list .heading--selling {
+      margin: 3px 0;
+      font-size: 15px; }
+    .best-selling-section__list .groceries {
+      color: #4b4949;
+      font-size: 13px; }
+    .best-selling-section__list li:not(:first-child) {
+      margin-left: 2%; }
+    .best-selling-section__list li figure {
+      width: 100%;
+      margin-bottom: 10px; }
+    .best-selling-section__list li img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+    .best-selling-section__list li .rating::before {
+      content: "";
+      color: #4b4949;
+      font-size: 12px; }
+    .best-selling-section__list .line {
+      color: #4b4949;
+      text-decoration: line-through; }
+
+.leaf {
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
